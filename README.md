@@ -8,7 +8,7 @@
 - Add-ons / Install from repositery / LinuxServer.io's Docker Add-ons / Services / Portainer
 
 ### docker compose
-- https://github.com/linuxserver/docker-docker-compose/releases
+- https://github.com/linuxserver/docker-docker-compose
 ```
 mkdir /storage/.docker
 curl -L --fail https://raw.githubusercontent.com/linuxserver/docker-docker-compose/master/run.sh -o /storage/.docker/docker-compose
