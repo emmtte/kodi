@@ -1,13 +1,14 @@
 ## LibreELEC Raspberry Pi 4 Startup 
 
-### Kodi Startup
+## Kodi Startup
 
 - Add-ons / Install from repositery / LibreELEC Add-ons / Add-on repository / Services / Docker
 - Add-ons / Install from repositery / LibreELEC Add-ons / Add-on repository / LinuxServer.io's Docker Add-ons
 - Add-ons / Install from repositery / LinuxServer.io's Docker Add-ons / Services / Docker Image Updater
 - Add-ons / Install from repositery / LinuxServer.io's Docker Add-ons / Services / Portainer
 
-### docker compose
+## Docker Startup
+### docker-docker-compose
 - https://github.com/linuxserver/docker-docker-compose
 ```
 mkdir /storage/.docker
@@ -17,7 +18,7 @@ cd /storage/.docker
 ./docker-compose --version
 ```
 
-### transmission
+### docker-transmission
 - https://github.com/linuxserver/docker-transmission
 ```
 cd /storage/.docker
@@ -52,7 +53,7 @@ docker-compose -f docker-transmission.yml up -d
 docker-compose -f docker-transmission.yml down
 ```
 
-### pi-hole
+### docker-pi-hole
 - https://github.com/pi-hole/docker-pi-hole
 
 ```
