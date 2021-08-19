@@ -49,8 +49,8 @@ services:
     restart: unless-stopped
 ```
 ```
-docker-compose -f docker-transmission.yml up -d
-docker-compose -f docker-transmission.yml down
+./docker-compose -f docker-transmission.yml up -d
+./docker-compose -f docker-transmission.yml down
 ```
 
 ### docker-pi-hole
@@ -81,8 +81,8 @@ services:
     restart: unless-stopped
 ```
 ```
-docker-compose -f docker-pi-hole.yml up -d
-docker-compose -f docker-pi-hole.yml down
+./docker-compose -f docker-pi-hole.yml up -d
+./docker-compose -f docker-pi-hole.yml down
 ```
 
 ### TODO
