@@ -21,7 +21,7 @@ cd /storage/.docker
 ### docker-transmission
 - https://github.com/linuxserver/docker-transmission
 ```
-cd /storage/.docker
+cd /storage/docker
 touch docker-transmission.yml
 nano docker-transmission.yml
 ```
@@ -39,9 +39,9 @@ services:
       - USER=pi
       - PASS=raspberry
     volumes:
-      - /storage/.transmission/config:/config
-      - /storage/.transmission/downloads:/downloads
-      - /storage/.transmission/watch:/watch
+      - /storage/transmission/config:/config
+      - /storage/transmission/watch:/watch
+      - /var/media/storage/.transmission/downloads:/downloads
     ports:
       - 9091:9091/tcp
       - 51413:51413/tcp
@@ -57,7 +57,7 @@ docker-compose -f docker-transmission.yml down
 - https://github.com/pi-hole/docker-pi-hole
 
 ```
-cd /storage/.docker
+cd /storage/docker
 touch docker-pi-hole.yml
 nano docker-pi-hole.yml
 ```
