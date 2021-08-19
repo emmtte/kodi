@@ -11,10 +11,10 @@
 ### docker-docker-compose
 - https://github.com/linuxserver/docker-docker-compose
 ```
-mkdir /storage/.docker
-curl -L --fail https://raw.githubusercontent.com/linuxserver/docker-docker-compose/master/run.sh -o /storage/.docker/docker-compose
-chmod +x /storage/.docker/docker-compose
-cd /storage/.docker
+mkdir /storage/docker
+curl -L --fail https://raw.githubusercontent.com/linuxserver/docker-docker-compose/master/run.sh -o /storage/docker/docker-compose
+chmod +x /storage/docker/docker-compose
+cd /storage/docker
 ./docker-compose --version
 ```
 
@@ -71,8 +71,8 @@ services:
       TZ=Europe/Paris
       WEBPASSWORD=raspberry
     volumes:
-      - /storage/.pi-hole/etc-pihole/:/etc/pihole/
-      - /storage/.pi-hole/etc-dnsmasq.d/:/etc/dnsmasq.d/
+      - /storage/pi-hole/etc-pihole/:/etc/pihole/
+      - /storage/pi-hole/etc-dnsmasq.d/:/etc/dnsmasq.d/
     ports:
       - 53:53/tcp
       - 53:53/udp
