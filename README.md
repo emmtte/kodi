@@ -28,6 +28,11 @@ https://catch-up-tv-and-more.github.io/live_tv_installation/
 nano /storage/.kodi/userdata/keymaps/remote.xml
 <keymap><global><remote><red>contextmenu</red></remote></global></keymap>
 ```
+## Rename external usb drive
+```
+e2label /dev/sda1 "storage"
+reboot
+```
 
 ## Docker Startup
 ### docker-docker-compose
@@ -69,6 +74,13 @@ services:
       - 51413:51413/tcp
       - 51413:51413/udp
     restart: unless-stopped
+```
+```
+nano /storage/transmission/config
+"speed-limit-down": 10000,
+"speed-limit-down-enabled": true,
+"speed-limit-up": 1,
+"speed-limit-up-enabled": true,
 ```
 ```
 ./docker-compose -f docker-transmission.yml up -d
