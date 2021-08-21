@@ -19,6 +19,15 @@ https://catch-up-tv-and-more.github.io/installation
 https://catch-up-tv-and-more.github.io/live_tv_installation/
 - Add-ons 
 
+## Skin Embuary
+- https://github.com/sualfred/skin.embuary
+-
+
+## Enable Context Menu
+```
+nano /storage/.kodi/userdata/keymaps/remote.xml
+<keymap><global><remote><red>contextmenu</red></remote></global></keymap>
+```
 
 ## Docker Startup
 ### docker-docker-compose
