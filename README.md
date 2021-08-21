@@ -5,7 +5,20 @@
 - Add-ons / Install from repositery / LibreELEC Add-ons / Add-on repository / Services / Docker
 - Add-ons / Install from repositery / LibreELEC Add-ons / Add-on repository / LinuxServer.io's Docker Add-ons
 - Add-ons / Install from repositery / LinuxServer.io's Docker Add-ons / Services / Docker Image Updater
-- Add-ons / Install from repositery / LinuxServer.io's Docker Add-ons / Services / Portainer
+
+## Add-on Catch-up TV and more
+https://catch-up-tv-and-more.github.io/installation
+Settings / File Manager / Add source
+Name: Catch-Up TV & More
+URL: https://catch-up-tv-and-more.github.io/repo/
+Settings / Add-ons / Allow Unknown sources / Confirm
+Add-ons / Install Zip-file / Catch-Up TV & More / stable
+Add-ons / Install from Repositery / Catch-Up TV & More repository addon / Videos extensions / Catch-Up TV & More
+
+## Add-on IPTV Manager
+https://catch-up-tv-and-more.github.io/live_tv_installation/
+Add-ons 
+
 
 ## Docker Startup
 ### docker-docker-compose
