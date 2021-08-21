@@ -8,16 +8,16 @@
 
 ## Add-on Catch-up TV and more
 https://catch-up-tv-and-more.github.io/installation
-Settings / File Manager / Add source
-Name: Catch-Up TV & More
-URL: https://catch-up-tv-and-more.github.io/repo/
-Settings / Add-ons / Allow Unknown sources / Confirm
-Add-ons / Install Zip-file / Catch-Up TV & More / stable
-Add-ons / Install from Repositery / Catch-Up TV & More repository addon / Videos extensions / Catch-Up TV & More
+- Settings / File Manager / Add source
+  - Name: Catch-Up TV & More
+  - URL: https://catch-up-tv-and-more.github.io/repo/
+- Settings / Add-ons / Allow Unknown sources / Confirm
+- Add-ons / Install Zip-file / Catch-Up TV & More / stable
+- Add-ons / Install from Repositery / Catch-Up TV & More repository addon / Videos extensions / Catch-Up TV & More
 
 ## Add-on IPTV Manager
 https://catch-up-tv-and-more.github.io/live_tv_installation/
-Add-ons 
+- Add-ons 
 
 
 ## Docker Startup
