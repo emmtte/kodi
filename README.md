@@ -92,10 +92,12 @@ services:
     restart: unless-stopped
 ```
 ```
-nano /storage/transmission/config
+nano /storage/transmission/config/settings.json
+"peer-limit-global": 20,
+"peer-limit-per-torrent": 10,
 "speed-limit-down": 10000,
 "speed-limit-down-enabled": true,
-"speed-limit-up": 1,
+"speed-limit-up": 0,
 "speed-limit-up-enabled": true,
 ```
 ```
