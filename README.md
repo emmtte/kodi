@@ -20,6 +20,10 @@ https://catch-up-tv-and-more.github.io/installation
 https://catch-up-tv-and-more.github.io/live_tv_installation/
 - Add-ons 
 
+## Power Saving
+System settings / Power saving
+- Put display to sleep when idle : 5min
+
 ## Skin Embuary
 - https://github.com/sualfred/skin.embuary
 -
