@@ -97,7 +97,11 @@ services:
     restart: unless-stopped
 ```
 ```
+./docker-compose -f docker-transmission.yml up -d
+./docker-compose -f docker-transmission.yml down
 nano /storage/transmission/config/settings.json
+```
+```json
 "peer-limit-global": 20,
 "peer-limit-per-torrent": 10,
 "speed-limit-down": 10000,
@@ -105,10 +109,7 @@ nano /storage/transmission/config/settings.json
 "speed-limit-up": 0,
 "speed-limit-up-enabled": true,
 ```
-```
-./docker-compose -f docker-transmission.yml up -d
-./docker-compose -f docker-transmission.yml down
-```
+
 
 ### docker-pi-hole
 - https://github.com/pi-hole/docker-pi-hole
