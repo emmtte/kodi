@@ -55,6 +55,11 @@ Length1=-1
 Version=2
 ```
 
+- select a screensaver under appearance -> screensaver (even if you don't need it), set it to 4 minutes (it must be set to < 5, if not, it won't work)
+- enable "use visualisation if playing audio" in same screen
+- select a music visualisation under music -> playback
+
+
 ## Docker Startup
 ### docker-docker-compose
 - https://github.com/linuxserver/docker-docker-compose
