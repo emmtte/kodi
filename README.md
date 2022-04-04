@@ -21,8 +21,13 @@ https://catch-up-tv-and-more.github.io/live_tv_installation/
 - Add-ons 
 
 ## Power Saving
-System settings / Power saving
-- Put display to sleep when idle : 5min
+System settings / Power saving / Put display to sleep when idle / 5min
+
+- select a screensaver under appearance -> screensaver (even if you don't need it), set it to 4 minutes (it must be set to < 5, if not, it won't work)
+- enable "use visualisation if playing audio" in same screen
+- select a music visualisation under music -> playback
+Appearance / Show video playback in the background / Off
+Appearance / Background / Background opacity / very bright
 
 ## Skin Embuary
 - https://github.com/sualfred/skin.embuary
