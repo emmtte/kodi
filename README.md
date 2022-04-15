@@ -40,8 +40,15 @@ Appearance / Background / Background opacity / very bright
 ## Enable Context Menu
 ```
 nano /storage/.kodi/userdata/keymaps/remote.xml
-<keymap><global><remote><red>contextmenu</red></remote></global></keymap>
 ```
+```xml
+<keymap><global><remote>
+  <blue>contextmenu</blue>
+  <green>System.Exec("systemctl -q enable hyperion.service --now")</green>
+  <red>System.Exec("systemctl -q disable hyperion.service --now")</red>
+</remote></global></keymap>
+```
+
 ## Rename external usb drive
 ```
 e2label /dev/sda1 "storage"
