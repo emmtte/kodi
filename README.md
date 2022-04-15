@@ -20,6 +20,10 @@ https://catch-up-tv-and-more.github.io/installation
 https://catch-up-tv-and-more.github.io/live_tv_installation/
 - Add-ons 
 
+## Add-on PVR Freebox
+https://github.com/aassif/pvr.freebox
+
+
 ## Power Saving
 System settings / Power saving / Put display to sleep when idle / 5min
 
@@ -151,6 +155,23 @@ services:
 ```
 ./docker-compose -f docker-pi-hole.yml up -d
 ./docker-compose -f docker-pi-hole.yml down
+```
+
+### Hyperion
+- https://github.com/hyperion-project/hyperion.ng
+- https://github.com/hyperion-project/hyperion.ng/issues/983
+
+Install
+```
+cd storage
+wget -qO- https://git.io/Jz5Qp | bash -s Hyperion-2.0.13-beta.1-Linux-armv7l.tar.gz
+systemctl -q enable hyperion.service --now
+systemctl -q disable hyperion.service --now
+```
+
+Remove
+```
+rm -r hyperion
 ```
 
 ### TODO
