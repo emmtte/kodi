@@ -160,6 +160,7 @@ services:
 ### Hyperion
 - https://github.com/hyperion-project/hyperion.ng
 - https://github.com/hyperion-project/hyperion.ng/issues/983
+- https://gist.github.com/Paulchen-Panther/f0baf820343bbf800a041b102dd9cadd
 
 Install
 ```
