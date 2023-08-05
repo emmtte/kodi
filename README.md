@@ -6,23 +6,12 @@
 - Add-ons / Install from repositery / LibreELEC Add-ons / Add-on repository / LinuxServer.io's Docker Add-ons
 - Add-ons / Install from repositery / LinuxServer.io's Docker Add-ons / Services / Docker Image Updater
 
-## Add-on Catch-up TV and more
-https://catch-up-tv-and-more.github.io/installation
-- Settings / File Manager / Add source / Add network location
-  - Protocol : Web server directory (HTTPS)
-  - Server address: catch-up-tv-and-more.github.io
-  - Remote path : repo
-- System settings / Settings / Add-ons / Unknown sources / Confirm
-- Add-on browser / Install from zip file / Catch-Up TV & More / stable
-- Add-on browser / Install from Repositery / Catch-Up TV & More repository addon / Videos extensions / Catch-Up TV & More
-
 ## Add-on IPTV Manager
 https://catch-up-tv-and-more.github.io/live_tv_installation/
 - Add-ons 
 
 ## Add-on PVR Freebox
 https://github.com/aassif/pvr.freebox
-
 
 ## Power Saving
 System settings / Power saving / Put display to sleep when idle / 5min
@@ -76,23 +65,24 @@ Version=2
 - select a music visualisation under music -> playback
 
 
-## Docker Startup
-### docker-docker-compose
-- https://github.com/linuxserver/docker-docker-compose
+## Docker
+### Compose
+- https://github.com/docker/compose/releases
 ```
 mkdir /storage/docker
-curl -L --fail https://raw.githubusercontent.com/linuxserver/docker-docker-compose/master/run.sh -o /storage/docker/docker-compose
+nano /storage/.profile >>> PATH=$HOME/docker:$PATH
+wget -O /storage/docker/docker-compose https://github.com/docker/compose/releases/download/v2.20.2/docker-compose-linux-aarch64
 chmod +x /storage/docker/docker-compose
-cd /storage/docker
-./docker-compose --version
+reboot
+docker-compose --version
 ```
 
-### docker-transmission
+### Transmission
 - https://github.com/linuxserver/docker-transmission
 ```
-cd /storage/docker
-touch docker-transmission.yml
-nano docker-transmission.yml
+mkdir /storage/transmission
+touch /storage/transmission/transmission.yml
+nano /storage/transmission/transmission.yml
 ```
 ```yaml
 ---
@@ -100,10 +90,11 @@ version: "2.1"
 services:
   transmission:
     container_name: transmission
-    image: ghcr.io/linuxserver/transmission
+    platform: linux/armd64
+    image: lscr.io/linuxserver/transmission:latest
     environment:
-      - PUID=0
-      - PGID=0
+      - PUID=1000
+      - PGID=1000
       - TZ=Europe/Paris
       - USER=pi
       - PASS=raspberry
@@ -118,8 +109,6 @@ services:
     restart: unless-stopped
 ```
 ```
-./docker-compose -f docker-transmission.yml up -d
-./docker-compose -f docker-transmission.yml down
 nano /storage/transmission/config/settings.json
 ```
 ```json
@@ -130,9 +119,12 @@ nano /storage/transmission/config/settings.json
 "speed-limit-up": 0,
 "speed-limit-up-enabled": true,
 ```
+```
+docker-compose -f /storage/transmission/transmission.yml up -d
+docker-compose -f /storage/transmission/transmission.yml down
+```
 
-
-### docker-pi-hole
+### Pi-hole
 - https://github.com/pi-hole/docker-pi-hole
 
 ```
@@ -185,7 +177,6 @@ rm -r hyperion
 ### TODO
 Kodi
 - https://github.com/sualfred/skin.embuary
-- https://github.com/Catch-up-TV-and-More/plugin.video.catchuptvandmore
 Info
 - /storage => SD Card
 - /var/media => HDD Drive
