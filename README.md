@@ -1,5 +1,25 @@
 # LibreELEC Raspberry Pi 4 Startup 
 
+
+## Configuration
+```
+mount -o remount,rw /flash
+nano /flash/config.txt
+  hdmi_enable_4kp60=1
+  config_hdmi_boost=7
+mount -o remount,ro /flash
+reboot
+```
+
+
+## Update
+```
+systemctl stop kodi
+wget -P /storage/.update https://releases.libreelec.tv/LibreELEC-RPi4.arm-11.0.3.img.gz
+reboot
+```
+
+
 ## Add-on
 - https://github.com/aassif/pvr.freebox
 
@@ -91,7 +111,12 @@ Version=2
 
 ```
 mkdir /storage/docker
-nano /storage/.profile >>> PATH=$HOME/docker:$PATH
+nano /storage/.profile
+```
+```bash
+PATH=$HOME/docker:$PATH
+```
+```
 wget -O /storage/docker/docker-compose https://github.com/docker/compose/releases/download/v2.20.2/docker-compose-linux-aarch64
 chmod +x /storage/docker/docker-compose
 reboot
@@ -113,7 +138,7 @@ version: "2.1"
 services:
   transmission:
     container_name: transmission
-    platform: linux/armd64
+    platform: linux/arm64
     image: lscr.io/linuxserver/transmission:latest
     environment:
       - PUID=1000
@@ -180,13 +205,41 @@ services:
 ./docker-compose -f docker-pi-hole.yml down
 ```
 
+### Immich
+- https://github.com/immich-app/immich
+```
+mkdir immich
+wget -O immich.yml https://github.com/immich-app/immich/releases/latest/download/docker-compose.yml
+wget -O .env https://github.com/immich-app/immich/releases/latest/download/example.env
+nano /storage/immich/.env
+```
+```
+UPLOAD_LOCATION=/var/media/storage/Photos
+DB_PASSWORD=password
+TYPESENSE_API_KEY=key
+```
+```
+nano /storage/immich/immich.yml
+```
+```
+  services:
+    immich-server:
+      platform: linux/arm64
+  ...
+```
+```
+docker-compose -f /storage/immich/immich.yml up -d
+docker-compose -f /storage/immich/immich.yml down
+```
+http://192.168.0.250:2283/
 
-## Hyperion
+
+### Hyperion
 - https://github.com/hyperion-project/hyperion.ng
 - https://github.com/hyperion-project/hyperion.ng/issues/983
 - https://gist.github.com/Paulchen-Panther/f0baf820343bbf800a041b102dd9cadd
 
-##### Install
+#### Install
 ```
 cd storage
 wget -qO- https://git.io/Jz5Qp | bash -s Hyperion-2.0.13-beta.1-Linux-armv7l.tar.gz
@@ -194,7 +247,7 @@ systemctl -q enable hyperion.service --now
 systemctl -q disable hyperion.service --now
 ```
 
-##### Remove
+#### Remove
 ```
 rm -r hyperion
 ```
