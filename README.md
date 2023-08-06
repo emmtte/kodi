@@ -11,9 +11,9 @@ Settings > Settings
 Settings > Power saving / Put display to sleep when idle / 5min
 
 Settings > Interface settings > Screensaver 
-  > - Screensaver mode : Black
-    - Wait time : 2min
-    - Use visualisation if playing audio : [X]
+> Screensaver mode : Black
+> Wait time : 2min
+> Use visualisation if playing audio : [X]
   
 - select a screensaver under appearance -> screensaver (even if you don't need it), set it to 4 minutes (it must be set to < 5, if not, it won't work)
 - select a music visualisation under music -> playback
