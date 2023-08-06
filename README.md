@@ -22,6 +22,7 @@ reboot
 
 ## Add-on
 
+####  Add-ons > Repository -> LibreELEC Add-ons -> Program add-ons -> System tools
 ####  Add-ons > Repository -> LibreELEC Add-ons -> Services -> Docker
 ####  Add-ons > Repository -> LibreELEC Add-ons -> PVR clients -> PVR Freebox TV
 - https://github.com/aassif/pvr.freebox
