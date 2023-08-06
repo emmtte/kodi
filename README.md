@@ -13,7 +13,7 @@ Settings > Power saving / Put display to sleep when idle / 5min
 Settings > Interface settings > Screensaver 
 - Screensaver mode : Black
 - Wait time : 2min
-- Use visualisation if playing audio : [X]
+- Use visualisation if playing audio : Enable
   
 - select a screensaver under appearance -> screensaver (even if you don't need it), set it to 4 minutes (it must be set to < 5, if not, it won't work)
 - select a music visualisation under music -> playback
@@ -23,26 +23,27 @@ Appearance / Background / Background opacity / very bright
 ## Skin Embuary
 - https://github.com/sualfred/skin.embuary
 
-##### General > Window configuration > General > Layout
+#### General > Window configuration > General > Layout
 - Hide main menu and only show widgets : Enable
 
-##### General > Window configuration > General > Home and hubs > Home > Edit widget configuration
+#### General > Window configuration > General > Home and hubs > Home > Edit widget configuration
 - 1 : Last tuned channels
 - 2 : Continue watching
 - 3 : Next up
 - 4 : Latest TV shows
 - 5 : Latest movies (custom 1)
 
-##### General > Window configuration > General > Custom widgets
+#### General > Window configuration > General > Custom widgets
 - Custom 1 : Latest movies
 - Edit path : library://video/movies/recentlyaddedmovies.xml/
 - Config : Type : Videos, Layout : Wide
 
-##### General > Appearance > Background
+#### General > Appearance > Background
 - Show fanarts in the backgound : Enable
 - Background opacity : very bright
 
-## Enable Context Menu
+
+## Context Menu
 ```
 nano /storage/.kodi/userdata/keymaps/remote.xml
 ```
@@ -54,13 +55,15 @@ nano /storage/.kodi/userdata/keymaps/remote.xml
 </remote></global></keymap>
 ```
 
-## Rename external usb drive
+
+## External Drive
 ```
 e2label /dev/sda1 "storage"
 reboot
 ```
 
-## Streaming Soundtracks
+
+## Playlist
 ```
 cd music
 nano sst.pls
@@ -85,6 +88,7 @@ Version=2
 
 ### Compose
 - https://github.com/docker/compose/releases
+
 ```
 mkdir /storage/docker
 nano /storage/.profile >>> PATH=$HOME/docker:$PATH
@@ -94,8 +98,10 @@ reboot
 docker-compose --version
 ```
 
+
 ### Transmission
 - https://github.com/linuxserver/docker-transmission
+
 ```
 mkdir /storage/transmission
 touch /storage/transmission/transmission.yml
@@ -141,6 +147,7 @@ docker-compose -f /storage/transmission/transmission.yml up -d
 docker-compose -f /storage/transmission/transmission.yml down
 ```
 
+
 ### Pi-hole
 - https://github.com/pi-hole/docker-pi-hole
 
@@ -173,12 +180,13 @@ services:
 ./docker-compose -f docker-pi-hole.yml down
 ```
 
-### Hyperion
+
+## Hyperion
 - https://github.com/hyperion-project/hyperion.ng
 - https://github.com/hyperion-project/hyperion.ng/issues/983
 - https://gist.github.com/Paulchen-Panther/f0baf820343bbf800a041b102dd9cadd
 
-Install
+##### Install
 ```
 cd storage
 wget -qO- https://git.io/Jz5Qp | bash -s Hyperion-2.0.13-beta.1-Linux-armv7l.tar.gz
@@ -186,7 +194,7 @@ systemctl -q enable hyperion.service --now
 systemctl -q disable hyperion.service --now
 ```
 
-Remove
+##### Remove
 ```
 rm -r hyperion
 ```
