@@ -1,30 +1,45 @@
 # LibreELEC Raspberry Pi 4 Startup 
 
-## Kodi Startup
+## Add-on
+- https://github.com/aassif/pvr.freebox
 
-- Add-ons / Install from repositery / LibreELEC Add-ons / Add-on repository / Services / Docker
-- Add-ons / Install from repositery / LibreELEC Add-ons / Add-on repository / LinuxServer.io's Docker Add-ons
-- Add-ons / Install from repositery / LinuxServer.io's Docker Add-ons / Services / Docker Image Updater
-
-## Add-on IPTV Manager
-https://catch-up-tv-and-more.github.io/live_tv_installation/
-- Add-ons 
-
-## Add-on PVR Freebox
-https://github.com/aassif/pvr.freebox
+Settings > Settings 
+  Notifications : Off
+  
 
 ## Power Saving
-System settings / Power saving / Put display to sleep when idle / 5min
+Settings > Power saving / Put display to sleep when idle / 5min
 
+
+
+Settings > Interface settings > Screensaver 
+  Screensaver mode : Black
+  Wait time : 2min
+  Use visualisation if playing audio : Enable
+  
 - select a screensaver under appearance -> screensaver (even if you don't need it), set it to 4 minutes (it must be set to < 5, if not, it won't work)
-- enable "use visualisation if playing audio" in same screen
 - select a music visualisation under music -> playback
 Appearance / Show video playback in the background / Off
 Appearance / Background / Background opacity / very bright
 
 ## Skin Embuary
 - https://github.com/sualfred/skin.embuary
--
+
+General > Window configuration > General > Layout
+  Hine main menu and only show widgets : Enable
+General > Window configuration > General > Home and hubs > Home > Edit widget configuration
+  1 : Last tuned channels
+  2 : Continue watching
+  3 : Next up
+  4 : Latest TV shows
+  5 : Latest movies (custom 1)
+General > Window configuration > General > Custom widgets
+  Custom 1 : Latest movies
+  Edit path : library://video/movies/recentlyaddedmovies.xml/
+  Config : Type : Videos, Layout : Wide
+General > Appearance > Background
+  Show fanarts in the backgound : Enable
+  Background opacity : very bright
 
 ## Enable Context Menu
 ```
@@ -66,6 +81,7 @@ Version=2
 
 
 ## Docker
+
 ### Compose
 - https://github.com/docker/compose/releases
 ```
@@ -173,10 +189,3 @@ Remove
 ```
 rm -r hyperion
 ```
-
-### TODO
-Kodi
-- https://github.com/sualfred/skin.embuary
-Info
-- /storage => SD Card
-- /var/media => HDD Drive
