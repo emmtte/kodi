@@ -11,36 +11,36 @@ Settings > Settings
 Settings > Power saving / Put display to sleep when idle / 5min
 
 Settings > Interface settings > Screensaver 
-> Screensaver mode : Black
-> Wait time : 2min
-> Use visualisation if playing audio : [X]
+- Screensaver mode : Black
+- Wait time : 2min
+- Use visualisation if playing audio : [X]
   
 - select a screensaver under appearance -> screensaver (even if you don't need it), set it to 4 minutes (it must be set to < 5, if not, it won't work)
 - select a music visualisation under music -> playback
 Appearance / Show video playback in the background / Off
 Appearance / Background / Background opacity / very bright
 
-## Skin Embuary
+# Skin Embuary
 - https://github.com/sualfred/skin.embuary
 
-General > Window configuration > General > Layout
-  > Hide main menu and only show widgets : Enable
+### General **>** Window configuration **>** General **>** Layout
+- Hide main menu and only show widgets : Enable
 
-General > Window configuration > General > Home and hubs > Home > Edit widget configuration
-  > 1 : Last tuned channels
-  > 2 : Continue watching
-  > 3 : Next up
-  > 4 : Latest TV shows
-  > 5 : Latest movies (custom 1)
+### General > Window configuration > General > Home and hubs > Home > Edit widget configuration
+- 1 : Last tuned channels
+- 2 : Continue watching
+- 3 : Next up
+- 4 : Latest TV shows
+- 5 : Latest movies (custom 1)
 
-General > Window configuration > General > Custom widgets
-  > Custom 1 : Latest movies
-  > Edit path : library://video/movies/recentlyaddedmovies.xml/
-  > Config : Type : Videos, Layout : Wide
+### General > Window configuration > General > Custom widgets
+- Custom 1 : Latest movies
+- Edit path : library://video/movies/recentlyaddedmovies.xml/
+- Config : Type : Videos, Layout : Wide
 
-General > Appearance > Background
-  > Show fanarts in the backgound : Enable
-  > Background opacity : very bright
+### General > Appearance > Background
+- Show fanarts in the backgound : Enable
+- Background opacity : very bright
 
 ## Enable Context Menu
 ```
