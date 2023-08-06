@@ -21,12 +21,14 @@ reboot
 
 
 ## Add-on
+
+####  Add-ons > Repository -> LibreELEC Add-ons -> Services -> Docker
+####  Add-ons > Repository -> LibreELEC Add-ons -> PVR clients -> PVR Freebox TV
 - https://github.com/aassif/pvr.freebox
 
-Settings > Settings 
+#### Settings > Settings 
   - Notifications : Off
   
-
 ## Power Saving
 #### System > System settings > Power saving > Sleep / Shutdown 
 - Put display to sleep when idle : 5min
