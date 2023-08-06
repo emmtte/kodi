@@ -20,25 +20,25 @@ Settings > Interface settings > Screensaver
 Appearance / Show video playback in the background / Off
 Appearance / Background / Background opacity / very bright
 
-# Skin Embuary
+## Skin Embuary
 - https://github.com/sualfred/skin.embuary
 
-### General **>** Window configuration **>** General **>** Layout
+##### General > Window configuration > General > Layout
 - Hide main menu and only show widgets : Enable
 
-### General > Window configuration > General > Home and hubs > Home > Edit widget configuration
+##### General > Window configuration > General > Home and hubs > Home > Edit widget configuration
 - 1 : Last tuned channels
 - 2 : Continue watching
 - 3 : Next up
 - 4 : Latest TV shows
 - 5 : Latest movies (custom 1)
 
-### General > Window configuration > General > Custom widgets
+##### General > Window configuration > General > Custom widgets
 - Custom 1 : Latest movies
 - Edit path : library://video/movies/recentlyaddedmovies.xml/
 - Config : Type : Videos, Layout : Wide
 
-### General > Appearance > Background
+##### General > Appearance > Background
 - Show fanarts in the backgound : Enable
 - Background opacity : very bright
 
