@@ -1,4 +1,4 @@
-# LibreELEC Raspberry Pi 4 Startup 
+# LibreELEC Raspberry Pi 4
 
 
 ## Configuration
