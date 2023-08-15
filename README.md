@@ -140,8 +140,8 @@ services:
     platform: linux/arm64
     image: lscr.io/linuxserver/transmission:latest
     environment:
-      - PUID=1000
-      - PGID=1000
+      - PUID=0
+      - PGID=0
       - TZ=Europe/Paris
       - USER=pi
       - PASS=raspberry
