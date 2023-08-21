@@ -232,6 +232,22 @@ docker-compose -f /storage/immich/immich.yml down
 ```
 http://192.168.0.250:2283/
 
+### Config
+```
+nano ash_history
+```
+
+```
+
+docker-compose -f docker-pi-hole.yml up -d
+docker-compose -f docker-pi-hole.yml down
+docker-compose -f /storage/immich/immich.yml up -d
+docker-compose -f /storage/immich/immich.yml down
+docker-compose -f /storage/transmission/transmission.yml up -d
+docker-compose -f /storage/transmission/transmission.yml down
+
+```
+
 
 ### Hyperion
 - https://github.com/hyperion-project/hyperion.ng
