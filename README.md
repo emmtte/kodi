@@ -49,17 +49,17 @@ reboot
 #### Embuary > Appearance > Window configuration > General > Layout
 - Hide main menu and only show widgets : Enable
 
-#### Embuary > Appearance > Window configuration > General > Home and hubs > Home > Edit widget configuration
+#### Embuary > Appearance > Window configuration > Custom widgets
+- Custom 1 : Latest movies
+- Edit path : library://video/movies/recentlyaddedmovies.xml/
+- Config : Type : Videos, Layout : Wide
+
+#### Embuary > Appearance > Window configuration > Home and hubs > Home > Edit widget configuration
 - 1 : Last tuned channels
 - 2 : Continue watching
 - 3 : Next up
 - 4 : Latest TV shows
 - 5 : Latest movies (custom 1)
-
-#### Embuary > Appearance > Window configuration > General > Custom widgets
-- Custom 1 : Latest movies
-- Edit path : library://video/movies/recentlyaddedmovies.xml/
-- Config : Type : Videos, Layout : Wide
 
 #### Embuary > Appearance > General > Appearance > Background
 - Show video playback in the background : Disable
