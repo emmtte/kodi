@@ -36,7 +36,7 @@ reboot
 
 #### Kodi > Interface settings > Screensaver
 - Screensaver mode : Black
-- Wait time : 4min
+- Wait time : 3min
 - Use visualisation if playing audio : Enable
   
 #### System > Player settings > Music > Playback
@@ -46,6 +46,7 @@ reboot
 ## Skin Embuary
 - https://github.com/sualfred/skin.embuary
 
+#### Add-ons > Download > Look and Feel > Skin > Embuary (Matrix) > Install
 #### Embuary > Appearance > Window configuration > General > Layout
 - Hide main menu and only show widgets : Enable
 
