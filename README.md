@@ -266,4 +266,6 @@ systemctl -q disable hyperion.service --now
 #### Remove
 ```
 rm -r hyperion
+
+
 ```
