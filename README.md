@@ -141,8 +141,8 @@ services:
     platform: linux/arm64
     image: lscr.io/linuxserver/transmission:latest
     environment:
-      - PUID=0
-      - PGID=0
+      - PUID=1000
+      - PGID=1000
       - TZ=Europe/Paris
       - USER=pi
       - PASS=raspberry
@@ -151,8 +151,8 @@ services:
       - /storage/transmission/watch:/watch
       - /var/media/storage/.transmission/downloads:/downloads
     ports:
-      - 9091:9091/tcp
-      - 51413:51413/tcp
+      - 9091:9091
+      - 51413:51413
       - 51413:51413/udp
     restart: unless-stopped
 ```
