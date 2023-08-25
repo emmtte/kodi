@@ -128,7 +128,7 @@ docker-compose --version
 - https://github.com/linuxserver/docker-transmission
 
 ```
-mkdir /storage/transmission
+mkdir /storage/transmission /storage/transmission/config
 touch /storage/transmission/transmission.yml
 nano /storage/transmission/transmission.yml
 ```
