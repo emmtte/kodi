@@ -170,7 +170,9 @@ nano /storage/transmission/config/settings.json
 ```
 ```
 docker-compose -f /storage/transmission/transmission.yml up -d
+```
 http://192.168.0.1:9091/transmission/web/
+```
 docker-compose -f /storage/transmission/transmission.yml down
 ```
 
@@ -203,6 +205,9 @@ services:
 ```
 ```
 docker-compose -f /storage/pi-hole/pi-hole.yml up -d
+```
+http://192.168.0.1/admin
+```
 docker-compose -f /storage/pi-hole/pi-hole.yml down
 ```
 
@@ -210,8 +215,8 @@ docker-compose -f /storage/pi-hole/pi-hole.yml down
 - https://github.com/immich-app/immich
 ```
 mkdir immich
-wget -O immich.yml https://github.com/immich-app/immich/releases/latest/download/docker-compose.yml
-wget -O .env https://github.com/immich-app/immich/releases/latest/download/example.env
+wget -O /storage/immich/immich.yml https://github.com/immich-app/immich/releases/latest/download/docker-compose.yml
+wget -O /storage/immich/.env https://github.com/immich-app/immich/releases/latest/download/example.env
 nano /storage/immich/.env
 ```
 ```
@@ -230,9 +235,12 @@ nano /storage/immich/immich.yml
 ```
 ```
 docker-compose -f /storage/immich/immich.yml up -d
+```
+http://192.168.0.1:2283/
+```
 docker-compose -f /storage/immich/immich.yml down
 ```
-http://192.168.0.250:2283/
+
 
 ### Config
 ```
