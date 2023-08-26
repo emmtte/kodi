@@ -170,6 +170,7 @@ nano /storage/transmission/config/settings.json
 ```
 ```
 docker-compose -f /storage/transmission/transmission.yml up -d
+http://192.168.0.1:9091/transmission/web/
 docker-compose -f /storage/transmission/transmission.yml down
 ```
 
