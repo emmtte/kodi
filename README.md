@@ -83,7 +83,7 @@ nano /storage/.kodi/userdata/keymaps/remote.xml
 
 ## External Drive
 ```
-e2label /dev/sda1 "storage"
+e2label /dev/sda data
 reboot
 ```
 
