@@ -128,7 +128,7 @@ docker-compose --version
 - https://github.com/linuxserver/docker-transmission
 
 ```
-mkdir /storage/transmission /storage/transmission/config
+mkdir /storage/transmission
 touch /storage/transmission/transmission.yml
 nano /storage/transmission/transmission.yml
 ```
@@ -179,9 +179,8 @@ docker-compose -f /storage/transmission/transmission.yml down
 - https://github.com/pi-hole/docker-pi-hole
 
 ```
-cd /storage/docker
-touch docker-pi-hole.yml
-nano docker-pi-hole.yml
+mkdir /storage/pi-hole
+touch /storage/pi-hole/pi-hole.yml
 ```
 ```yaml
 version: "3"
@@ -189,22 +188,22 @@ services:
   pihole:
     container_name: pihole
     image: pihole/pihole:latest
-    environment:
-      TZ=Europe/Paris
-      WEBPASSWORD=raspberry
-    volumes:
-      - /storage/pi-hole/etc-pihole/:/etc/pihole/
-      - /storage/pi-hole/etc-dnsmasq.d/:/etc/dnsmasq.d/
+    platform: linux/arm64
     ports:
-      - 53:53/tcp
-      - 53:53/udp
-      - 67:67/udp
-      - 80:80/tcp
+      - "53:53/tcp"
+      - "53:53/udp"
+      - "80:80/tcp"
+    environment:
+      TZ: 'Europe/Paris'
+      WEBPASSWORD: 'raspberry'
+    volumes:
+      - '/storage/pi-hole/etc-pihole:/etc/pihole'
+      - '/storage/pi-hole/etc-dnsmasq.d:/etc/dnsmasq.d'
     restart: unless-stopped
 ```
 ```
-./docker-compose -f docker-pi-hole.yml up -d
-./docker-compose -f docker-pi-hole.yml down
+docker-compose -f /storage/pi-hole/pi-hole.yml up -d
+docker-compose -f /storage/pi-hole/pi-hole.yml down
 ```
 
 ### Immich
