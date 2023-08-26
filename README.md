@@ -157,6 +157,7 @@ services:
     restart: unless-stopped
 ```
 ```
+docker-compose -f /storage/transmission/transmission.yml up
 nano /storage/transmission/config/settings.json
 ```
 ```json
