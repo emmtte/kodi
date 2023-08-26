@@ -217,6 +217,7 @@ docker-compose -f /storage/pi-hole/pi-hole.yml down
 mkdir immich
 wget -O /storage/immich/immich.yml https://github.com/immich-app/immich/releases/latest/download/docker-compose.yml
 wget -O /storage/immich/.env https://github.com/immich-app/immich/releases/latest/download/example.env
+wget -O /storage/immich/hwaccel.yml https://github.com/immich-app/immich/releases/latest/download/hwaccel.yml
 nano /storage/immich/.env
 ```
 ```
