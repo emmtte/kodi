@@ -42,6 +42,8 @@ reboot
 #### System > Player settings > Music > Playback
 - Visualisation : Shadertoy
 
+#### Samba 
+- After Samba configuration reboot system 
 
 ## Skin Embuary
 - https://github.com/sualfred/skin.embuary
