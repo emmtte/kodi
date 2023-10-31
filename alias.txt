@@ -1,7 +1,7 @@
 vim ~/.bashrc
-alias torrup='docker-compose /storage/transmission/transmission.yml up -d'
-alias torrdw='docker-compose /storage/transmission/transmission.yml down'
-alias holeup='docker-compose /storage/pi-hole/pi-hole.yml up -d'
-alias holedw='docker-compose /storage/pi-hole/pi-hole.yml down'
+alias torrup='docker-compose -f /storage/transmission/transmission.yml up -d'
+alias torrdw='docker-compose -f /storage/transmission/transmission.yml down'
+alias holeup='docker-compose -f /storage/pi-hole/pi-hole.yml up -d'
+alias holedw='docker-compose -f /storage/pi-hole/pi-hole.yml down'
 source ~/.bashrc
 
