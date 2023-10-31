@@ -260,7 +260,8 @@ docker-compose -f /storage/transmission/transmission.yml up -d
 docker-compose -f /storage/transmission/transmission.yml down
 
 ```
-
+### Samba
+cp samba.conf /storage/.config/samba.conf
 
 ### Hyperion
 - https://github.com/hyperion-project/hyperion.ng
