@@ -27,6 +27,15 @@ reboot
 ####  Add-ons > Repository -> LibreELEC Add-ons -> PVR clients -> PVR Freebox TV
 - https://github.com/aassif/pvr.freebox
 
+#### Media Settings > Library > Videos...
+   - + Add Videos...
+     + Movies
+     + TvShows
+#### Media Settings > Library > Music...
+   - + Add Music...
+     + Musics
+#### Library update > All
+
 #### Settings > Settings 
   - Notifications : Off
   
