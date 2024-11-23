@@ -3,7 +3,7 @@
 
 ## Installation
 ```
-sudo apt install kodi kodi21-visualization-shadertoy
+sudo apt install kodi kodi-inputstream-adaptive kodi21-visualization-shadertoy
 ```
 
 ## Configuration
