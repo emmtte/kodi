@@ -1,6 +1,11 @@
 # LibreELEC Raspberry Pi 4
 
 
+## Installation
+```
+sudo apt install kodi kodi21-visualization-shadertoy
+```
+
 ## Configuration
 ```
 mount -o remount,rw /flash
